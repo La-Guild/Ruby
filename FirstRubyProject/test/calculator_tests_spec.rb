@@ -13,7 +13,8 @@ RSpec.describe 'MyRspecTest' do
 
   context 'when condition' do
     it '2 + 1' do
-      expect(Calculator.add(2, 1)).to be(3)
+      @sut = Calculator.new()
+      expect(@sut.add_from_instance(2, 1)).to be(3)
     end
     it '2 + 5 fails' do
       expect(Calculator.add(2,5)).to be(4)

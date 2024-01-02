@@ -19,5 +19,8 @@ RSpec.describe 'MyRspecTest' do
     it '2 + 5 fails' do
       expect(Calculator.add(2,5)).to be(4)
     end
+    it '2 + 5 pass' do
+      expect(Calculator.add(2,5)).to be(7)
+    end
   end
 end

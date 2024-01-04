@@ -3,14 +3,6 @@ require 'rspec'
 require_relative '../public/calculator'
 
 RSpec.describe 'MyRspecTest' do
-  before do
-    # Do nothing
-  end
-
-  after do
-    # Do nothing
-  end
-
   context 'when condition' do
     it '2 + 1' do
       @sut = Calculator.new()

@@ -2,7 +2,7 @@
 require 'rspec'
 require_relative '../public/calculator'
 
-RSpec.describe 'MyRspecTest' do
+describe 'MyRspecTest' do
   context 'when condition' do
     it '2 + 1' do
       sut = Calculator.new()

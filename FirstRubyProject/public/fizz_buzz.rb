@@ -3,10 +3,8 @@
 class FizzBuzz
   def self.speak(i)
     result = adksfhjaklsdfhj(i)
-    i.to_s.each_char { |x|
-      result += aldksfjaklsf(x)
-    }
-    
+    result += asdfkljafdklhjasdgljhds(i)
+
     return result
   end
 
@@ -31,5 +29,13 @@ class FizzBuzz
       return "Buzz"
     end
     return ""
+  end
+
+  def self.asdfkljafdklhjasdgljhds(i)
+    result = ""
+    i.to_s.each_char { |x|
+      result += aldksfjaklsf(x)
+    }
+    result
   end
 end

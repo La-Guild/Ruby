@@ -14,6 +14,7 @@ RSpec.describe 'MyRspecTest' do
       expect(FizzBuzz.speak(1)).to be(1)
       expect(FizzBuzz.speak(3)).to be("Fizz")
       expect(FizzBuzz.speak(5)).to be("Buzz")
+      expect(FizzBuzz.speak(15)).to be("FizzBuzz")
     end
   end
 end

@@ -3,14 +3,9 @@
 class FizzBuzz
   def self.speak(i)
     result = adksfhjaklsdfhj(i)
+    result += aldksfjaklsf(i)
 
-    if i == 3
-      result += "Fizz"
-    end
-    if i == 5
-      result += "Buzz"
-    end
-    result
+    return result
   end
 
   def self.adksfhjaklsdfhj(i)
@@ -23,6 +18,17 @@ class FizzBuzz
     if i % 5 == 0
       return "Buzz"
     end
-    i
+    i.to_s
+  end
+
+  def self.aldksfjaklsf(i)
+    if i == 3
+      return "Fizz"
+    end
+    if i == 5
+      return "Buzz"
+    end
+
+    return ""
   end
 end

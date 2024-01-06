@@ -3,9 +3,9 @@
 class FizzBuzz
   def self.speak(i)
     result = adksfhjaklsdfhj(i)
-    for x in i.to_s
-    result += aldksfjaklsf(x)
-    end
+    i.to_s.each_char { |x|
+      result += aldksfjaklsf(x)
+    }
     
     return result
   end
@@ -24,10 +24,10 @@ class FizzBuzz
   end
 
   def self.aldksfjaklsf(i)
-    if i == 3
+    if i == "3"
       return "Fizz"
     end
-    if i == 5
+    if i == "5"
       return "Buzz"
     end
     return ""

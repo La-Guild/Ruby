@@ -15,7 +15,7 @@ RSpec.describe 'MyRspecTest' do
   context 'when condition' do
     it 'aldjksfhajksfh' do
       expect(FizzBuzz.speak(1)).to be(1)
-      expect(FizzBuzz.speak(3)).to be("FizzFizz")
+      expect(FizzBuzz.speak(3)).to eq("FizzFizz")
       expect(FizzBuzz.speak(5)).to be("Buzz")
       expect(FizzBuzz.speak(15)).to be("FizzBuzz")
     end

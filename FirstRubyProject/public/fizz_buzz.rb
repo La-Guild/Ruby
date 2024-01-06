@@ -2,13 +2,12 @@
 
 class FizzBuzz
   def self.speak(i)
-    result = adksfhjaklsdfhj(i)
-    result += asdfkljafdklhjasdgljhds(i)
-
+    result = word_of_multiple(i)
+    result += all_words_per_digit(i)
     return result
   end
 
-  def self.adksfhjaklsdfhj(i)
+  def self.word_of_multiple(i)
     if i % 3 == 0 && i % 5 == 0
       return "FizzBuzz"
     end
@@ -21,7 +20,13 @@ class FizzBuzz
     i.to_s
   end
 
-  def self.aldksfjaklsf(i)
+  def self.all_words_per_digit(i)
+    result = ""
+    i.to_s.each_char { |x| result += word_of_digit(x) }
+    result
+  end
+
+  def self.word_of_digit(i)
     if i == "3"
       return "Fizz"
     end
@@ -31,11 +36,4 @@ class FizzBuzz
     return ""
   end
 
-  def self.asdfkljafdklhjasdgljhds(i)
-    result = ""
-    i.to_s.each_char { |x|
-      result += aldksfjaklsf(x)
-    }
-    result
-  end
 end

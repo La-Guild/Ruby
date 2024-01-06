@@ -7,6 +7,9 @@ class FizzBuzz
     if i == 3
       result += "Fizz"
     end
+    if i == 5
+      result += "Buzz"
+    end
     result
   end
 

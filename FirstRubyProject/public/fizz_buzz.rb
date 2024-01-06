@@ -3,8 +3,10 @@
 class FizzBuzz
   def self.speak(i)
     result = adksfhjaklsdfhj(i)
-    result += aldksfjaklsf(i)
-
+    for x in i.to_s
+    result += aldksfjaklsf(x)
+    end
+    
     return result
   end
 
@@ -28,7 +30,6 @@ class FizzBuzz
     if i == 5
       return "Buzz"
     end
-
     return ""
   end
 end

@@ -6,6 +6,9 @@ class FizzBuzz
     if i % 3 == 0
       return "Fizz"
     end
+    if i % 5 == 0
+      return "Buzz"
+    end
     i
   end
 end

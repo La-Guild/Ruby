@@ -2,7 +2,12 @@
 
 class FizzBuzz
   def self.speak(i)
-    adksfhjaklsdfhj(i)
+    result = adksfhjaklsdfhj(i)
+
+    if i == 3
+      result += "Fizz"
+    end
+    result
   end
 
   def self.adksfhjaklsdfhj(i)

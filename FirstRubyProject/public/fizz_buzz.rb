@@ -2,6 +2,10 @@
 
 class FizzBuzz
   def self.speak(i)
+    adksfhjaklsdfhj(i)
+  end
+
+  def self.adksfhjaklsdfhj(i)
     if i % 3 == 0 && i % 5 == 0
       return "FizzBuzz"
     end

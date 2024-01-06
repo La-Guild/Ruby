@@ -12,6 +12,7 @@ RSpec.describe 'MyRspecTest' do
   context 'when condition' do
     it 'succeeds' do
       expect(FizzBuzz.sasfsa(1)).to be(1)
+      expect(FizzBuzz.sasfsa(3)).to be("Fizz")
     end
   end
 end

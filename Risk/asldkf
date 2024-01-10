@@ -1,0 +1,14 @@
+Requisitos Risk:
+- Solo 1vs1.
+- 15 tropas fijas por jugador.
+- Los jugadores empiezan con N Comunidades Autónomas aleatorias.
+- Lo único que puede hacer un jugador es atacar:
+  - De una Com. Aut. a otra **que sea adyacente**
+  - El jugador atacante elige el número de tropas con las que atacar.
+  - Cada defensor otorga 1d6 para la batalla. Máx 2d6.
+  - Cada atacante otorga 1d6 para la batalla. Máx 3d6.
+  - Batalla:
+     - Se ordenan dados, por cada bando, de mayor a menor.
+     - Se compara ordinalmente, uno a uno (los 1º de ambos bandos, los 2º de ambos bandos, etc.)
+     - Si `dado_atacante > dado_defensor`, muere 1 defensor. En caso contrario, muere 1 atacante.
+     - Si no queda ningún defensor, todos los atacantes supervivientes pasan a la Com. Aut. conquistada.

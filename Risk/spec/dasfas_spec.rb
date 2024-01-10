@@ -18,5 +18,11 @@ describe 'Dasfas' do
       sut.occupy_by(2)
       expect(sut.units).to be(2)
     end
+    it 'should asdfasdf' do
+      sut = Community.new
+      sut.occupy_by(2)
+      sut.leave(2)
+      expect(sut.units).to be(0)
+    end
   end
 end

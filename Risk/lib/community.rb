@@ -12,6 +12,8 @@ class Community
   end
 
   def leave(i)
+    raise "no puedes irte si no estás" if i > units
+
     @units -= i
   end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Aasfadsfa
+class Community
   attr_reader :units
 
   def initialize

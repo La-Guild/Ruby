@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33cb2dbb-16f2-4ed3-8f80-588965c8594a" name="Changes" comment="test: create failing test example" />
+    <list default="true" id="33cb2dbb-16f2-4ed3-8f80-588965c8594a" name="Changes" comment="test: create failing test example">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Ruby.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Risk/.idea/Risk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Risk/.idea/Risk.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Risk/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Risk/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Risk/spec/spec_helper.rb" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -259,6 +268,7 @@
       <workItem from="1704131306618" duration="55000" />
       <workItem from="1704131375154" duration="3000" />
       <workItem from="1704366426690" duration="677000" />
+      <workItem from="1704913845754" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="build: create project">
       <option name="closed" value="true" />

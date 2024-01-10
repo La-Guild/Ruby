@@ -10,9 +10,8 @@ require_relative '../public/fizz_buzz'
 # Si la palabra contiene un 3 se añadie un Fizz adicional al final
 # Si la palabra contiene un 5 se añadie un Buzz adicional al final
 
-RSpec.describe 'MyRspecTest' do
-
-  context 'when condition' do
+RSpec.describe 'FizzBuzz' do
+  context 'Other than multiple of 3 and 5' do
     it 'aldjksfhajksfh' do
       expect(FizzBuzz.speak(1)).to eq("1")
       expect(FizzBuzz.speak(3)).to eq("FizzFizz")

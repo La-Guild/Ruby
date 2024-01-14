@@ -3,6 +3,7 @@
 require 'rspec'
 require_relative '../lib/community'
 require_relative '../lib/player'
+require_relative '../lib/risk'
 
 describe 'Community' do
   context 'when being occupied' do
@@ -61,6 +62,16 @@ describe 'Community' do
       sut.deploy_in("Andalucía", 1)
       
       expect(doc.units).to be(1)
+    end
+
+    it 'should ' do
+      sut = Risk.new
+      doc = Player.new
+      
+      sut.sit(doc)
+      sut.start()
+      
+      expect(doc.recruited_units).to be(15)
     end
   end
 end

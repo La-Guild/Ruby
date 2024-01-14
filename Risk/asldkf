@@ -12,3 +12,7 @@ Requisitos Risk:
      - Se compara ordinalmente, uno a uno (los 1º de ambos bandos, los 2º de ambos bandos, etc.)
      - Si `dado_atacante > dado_defensor`, muere 1 defensor. En caso contrario, muere 1 atacante.
      - Si no queda ningún defensor, todos los atacantes supervivientes pasan a la Com. Aut. conquistada.
+
+Siguientes pasos:
+- Que el jugador pierda comunidades
+- Empezar el combate

@@ -42,7 +42,7 @@ describe 'Community' do
     it 'should ' do
       sut = Player.new
       sut.recruit(1)
-      expect(sut.non_deployed_units).to eq(1)
+      expect(sut.recruited_units).to eq(1)
     end
     it 'deploys units' do
       sut = Player.new
@@ -50,7 +50,7 @@ describe 'Community' do
       sut.owns(doc)
       sut.recruit(1)
       sut.deploy_in("Andalucía", 1)
-      expect(sut.non_deployed_units).to eq(0)
+      expect(sut.recruited_units).to eq(0)
     end
     it 'fdsafas' do
       sut = Player.new

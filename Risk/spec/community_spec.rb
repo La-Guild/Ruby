@@ -25,4 +25,9 @@ describe 'Community' do
       expect(sut.units).to be(0)
     end
   end
+  context 'owned by player' do
+    it 'should ' do
+      expect(Player.new().owned_communities).to be([])
+    end
+  end
 end

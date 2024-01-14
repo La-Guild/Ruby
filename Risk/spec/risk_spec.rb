@@ -16,16 +16,6 @@ describe 'Risk' do
       expect(doc.recruited_units).to be(15)
     end
 
-    it 'DELETE ME' do
-      sut = Risk.new
-      doc = Player.new
-
-      sut.sit(doc)
-      sut.start
-
-      expect(doc.owned_communities.length).not_to be(0)
-    end
-
     it 'distributes communities to players' do
       sut = Risk.new
       player1 = Player.new

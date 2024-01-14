@@ -6,7 +6,7 @@ require_relative '../lib/risk'
 
 describe 'Risk_spec' do
   context 'Risk' do
-    it 'asdfljkf units to players' do
+    it 'distribute units to players' do
       sut = Risk.new
       doc = Player.new
 
@@ -16,7 +16,7 @@ describe 'Risk_spec' do
       expect(doc.recruited_units).to be(15)
     end
 
-    it 'sdfklgsdfgl communities to players' do
+    it 'distribute communities to players' do
       sut = Risk.new
       doc = Player.new
 

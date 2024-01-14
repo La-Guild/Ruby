@@ -18,6 +18,8 @@ class Player
   end
 
   def deploy_in(where, how_much)
+    
+    @owned_communities.select { |x| -> {x.name === where} }
     @non_deployed_units -= how_much
   end
 end

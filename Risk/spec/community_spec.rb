@@ -50,5 +50,15 @@ describe 'Community' do
       sut.deploy_in("Andalucía", 1)
       expect(sut.non_deployed_units).to eq(0)
     end
+    it 'fdsafas' do
+      sut = Player.new
+      doc = Community.new("Andalucía")
+      sut.owns(doc)
+      sut.recruit(1)
+      
+      sut.deploy_in("Andalucía", 1)
+      
+      expect(doc.units).to be(1)
+    end
   end
 end

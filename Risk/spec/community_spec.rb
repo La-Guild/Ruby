@@ -26,9 +26,15 @@ describe 'Community' do
       expect(sut.units).to be(0)
     end
   end
+
   context 'owned by player' do
     it 'should ' do
-      expect(Player.new().owned_communities).to eq([])
+      expect(Player.new.owned_communities).to eq([])
+    end
+    it 'should ' do
+      sut = Player.new
+      sut.asdfasfd(Community.new)
+      expect(sut.owned_communities).to_not eq([])
     end
   end
 end

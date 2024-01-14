@@ -37,4 +37,12 @@ describe 'Community' do
       expect(sut.owned_communities).to_not eq([])
     end
   end
+
+  context 'player units' do
+    it 'should ' do
+      sut = Player.new
+      sut.recruit(1)
+      expect(sut.non_deployed_units).to eq(1)
+    end
+  end
 end

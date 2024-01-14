@@ -18,6 +18,7 @@ class Player
   end
 
   def deploy_in(where, how_much)
+    raise "no tengo suficientes unidades" if @non_deployed_units < how_much
     @owned_communities
       .select { lambda { |x| x.name === where } }[0]
       .occupy_by(how_much)

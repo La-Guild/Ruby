@@ -4,7 +4,7 @@ require 'rspec'
 require_relative '../lib/player'
 require_relative '../lib/risk'
 
-describe 'Risk_spec' do
+describe 'Risk' do
   context 'Risk' do
     it 'distributes units to players' do
       sut = Risk.new
@@ -16,7 +16,7 @@ describe 'Risk_spec' do
       expect(doc.recruited_units).to be(15)
     end
 
-    it 'distributes communities to players' do
+    it 'DELETE ME' do
       sut = Risk.new
       doc = Player.new
 
@@ -24,6 +24,19 @@ describe 'Risk_spec' do
       sut.start
 
       expect(doc.owned_communities.length).not_to be(0)
+    end
+
+    it 'distributes communities to players' do
+      sut = Risk.new
+      player1 = Player.new
+      player2 = Player.new
+
+      sut.sit(player1)
+      sut.sit(player2)
+      sut.start
+
+      expect(player1.owned_communities.length).not_to be(0)
+      expect(player2.owned_communities.length).not_to be(0)
     end
   end
 end

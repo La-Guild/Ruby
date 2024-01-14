@@ -33,7 +33,7 @@ describe 'Community' do
     end
     it 'should ' do
       sut = Player.new
-      sut.asdfasfd(Community.new)
+      sut.owns(Community.new)
       expect(sut.owned_communities).to_not eq([])
     end
   end

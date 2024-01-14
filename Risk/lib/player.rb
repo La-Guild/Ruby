@@ -7,7 +7,7 @@ class Player
     @owned_communities = []
   end
 
-  def asdfasfd(community)
+  def owns(community)
     @owned_communities.push(community)
   end
 end

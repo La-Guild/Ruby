@@ -6,10 +6,10 @@ class Risk
   
   def initialize
     @players = []
-    @all_communities = self.Spain
+    @all_communities = spain
   end
   
-  def self.Spain
+  def spain
     [Community.new, Community.new]
   end
 
@@ -19,6 +19,6 @@ class Risk
   
   def start
     players.each { |p| p.recruit(15)  }
-    communities_to_distribute = 
+    @all_communities.each { |c| players[0].owns(c) }
   end
 end

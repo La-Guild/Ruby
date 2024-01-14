@@ -18,6 +18,8 @@ class Player
   end
 
   def deploy_in(where, how_much)
+    raise "no poseo esa comunidad" \
+      unless @owned_communities.select { lambda { |x| x.name === where } }.any?
     raise "no tengo suficientes unidades" if @non_deployed_units < how_much
     @owned_communities
       .select { lambda { |x| x.name === where } }[0]

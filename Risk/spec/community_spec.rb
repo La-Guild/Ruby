@@ -44,5 +44,11 @@ describe 'Community' do
       sut.recruit(1)
       expect(sut.non_deployed_units).to eq(1)
     end
+    it 'deploys units' do
+      sut = Player.new
+      sut.recruit(1)
+      sut.deploy_in("Andalucía", 1)
+      expect(sut.non_deployed_units).to eq(0)
+    end
   end
 end

@@ -3,8 +3,8 @@
 class Player
   attr_reader :owned_communities
 
-  def owned_communities
-    []
+  def initialize
+    @owned_communities = []
   end
 
   def asdfasfd(community)

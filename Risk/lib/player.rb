@@ -16,4 +16,8 @@ class Player
   def recruit(i)
     @non_deployed_units += i
   end
+
+  def deploy_in(where, how_much)
+    @non_deployed_units -= how_much
+  end
 end

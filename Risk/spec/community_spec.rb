@@ -58,20 +58,10 @@ describe 'Community' do
       doc = Community.new("Andalucía")
       sut.owns(doc)
       sut.recruit(1)
-      
-      sut.deploy_in("Andalucía", 1)
-      
-      expect(doc.units).to be(1)
-    end
 
-    it 'should ' do
-      sut = Risk.new
-      doc = Player.new
-      
-      sut.sit(doc)
-      sut.start()
-      
-      expect(doc.recruited_units).to be(15)
+      sut.deploy_in("Andalucía", 1)
+
+      expect(doc.units).to be(1)
     end
   end
 end

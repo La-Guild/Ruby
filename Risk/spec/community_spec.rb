@@ -2,6 +2,7 @@
 
 require 'rspec'
 require_relative '../lib/community'
+require_relative '../lib/player'
 
 describe 'Community' do
   context 'when being occupied' do
@@ -27,7 +28,7 @@ describe 'Community' do
   end
   context 'owned by player' do
     it 'should ' do
-      expect(Player.new().owned_communities).to be([])
+      expect(Player.new().owned_communities).to eq([])
     end
   end
 end

@@ -46,6 +46,8 @@ describe 'Community' do
     end
     it 'deploys units' do
       sut = Player.new
+      doc = Community.new("Andalucía")
+      sut.owns(doc)
       sut.recruit(1)
       sut.deploy_in("Andalucía", 1)
       expect(sut.non_deployed_units).to eq(0)

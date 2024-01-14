@@ -18,8 +18,10 @@ class Player
   end
 
   def deploy_in(where, how_much)
-    
-    @owned_communities.select { |x| -> {x.name === where} }
+    @owned_communities
+      .select { lambda { |x| x.name === where } }[0]
+      .occupy_by(how_much)
+
     @non_deployed_units -= how_much
   end
 end

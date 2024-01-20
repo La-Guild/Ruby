@@ -3,6 +3,7 @@
 require 'rspec'
 require_relative '../lib/player'
 require_relative '../lib/risk'
+require_relative '../lib/community'
 
 describe 'Risk' do
   context 'Risk' do

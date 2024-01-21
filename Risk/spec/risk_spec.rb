@@ -5,6 +5,8 @@ require_relative '../lib/player'
 require_relative '../lib/risk'
 require_relative '../lib/community'
 
+#adsñklfjalsdfj
+
 describe 'Risk' do
   it 'distributes units to players' do
     sut = Risk.new

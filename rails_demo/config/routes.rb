@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "risk#index"
+  root "risks#index"
 
   resources :risks do
     collection do

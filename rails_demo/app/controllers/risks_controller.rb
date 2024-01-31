@@ -7,4 +7,8 @@ class RisksController < ApplicationController
     @risk.sit(Player.new)
     @risk.start
   end
+
+  def deploy_unit_to(community)
+
+  end
 end

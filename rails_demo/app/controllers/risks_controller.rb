@@ -1,11 +1,10 @@
 class RisksController < ApplicationController
   def index
-    @risk = Risk.new
   end
 
   def show
-  end
-
-  def start
+    @risk = Risk.new
+    @risk.sit(Player.new)
+    @risk.start
   end
 end

@@ -8,7 +8,7 @@ class Risk < ApplicationRecord
   end
 
   def spain
-    [Community.new, Community.new]
+    [Community.new("Murcia"), Community.new("Andalucía")]
   end
 
   def sit(doc)

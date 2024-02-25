@@ -13,14 +13,18 @@ class Bowling
 end
 
 class Frame
-    @score = 0
+    def initialize
+        @score = 0
+        @rolls = 0
+    end
 
     def roll(pins)
         @score += pins
+        @rolls += 1
     end
 
     def is_finished?
-        false
+        @rolls == 2
     end
 
     def score

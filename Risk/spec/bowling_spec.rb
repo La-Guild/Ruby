@@ -53,9 +53,22 @@ describe 'Bowling' do
     end
 
     context 'Frame' do
-        it 'adsfafs' do
+        it 'is not finished by default' do
             sut = Frame.new
             expect(sut.is_finished?).to be(false)
+        end
+
+        it 'is not finised after first roll' do
+            sut = Frame.new
+            sut.roll(4)
+            expect(sut.is_finished?).to be(false)
+        end
+
+        it 'is finised after 2 rolls' do
+            sut = Frame.new
+            sut.roll(4)
+            sut.roll(3)
+            expect(sut.is_finished?).to be(true)
         end
     end
 end

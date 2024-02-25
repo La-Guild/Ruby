@@ -33,6 +33,23 @@ describe 'Bowling' do
         sut.roll(4)
         expect(sut.score).to be(4+5)
     end
+
+    it 'complete one frame and a half' do
+        sut = Bowling.new
+        sut.roll(5)
+        sut.roll(3)
+        sut.roll(4)
+        expect(sut.score).to be(5 + 3 + 4)
+    end
+
+    it 'complete two frames' do
+        sut = Bowling.new
+        sut.roll(5)
+        sut.roll(3)
+        sut.roll(4)
+        sut.roll(4)
+        expect(sut.score).to be(5 + 3 + 4 + 4)
+    end
 end
 
 class Bowling

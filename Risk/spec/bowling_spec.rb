@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rspec'
+require_relative '../lib/bowling'
 
 # Un juego tiene 10 frames
 # Cada frame tiene 2 tiradas
@@ -49,19 +50,5 @@ describe 'Bowling' do
         sut.roll(4)
         sut.roll(4)
         expect(sut.score).to be(5 + 3 + 4 + 4)
-    end
-end
-
-class Bowling
-    def initialize
-        @score = 0
-    end
-
-    def roll(pins)
-        @score += pins
-    end
-
-    def score
-        @score
     end
 end

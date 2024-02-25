@@ -26,17 +26,25 @@ describe 'Bowling' do
         sut.roll(5)
         expect(sut.score).to be(5)
     end
+
+    it 'score of frame is the sum of its rolls' do
+        sut = Bowling.new
+        sut.roll(5)
+        sut.roll(4)
+        expect(sut.score).to be(4+5)
+    end
 end
 
 class Bowling
+    def initialize
+        @score = 0
+    end
+
     def roll(pins)
-        @score = pins
+        @score += pins
     end
 
     def score
-        if @score == nil
-            return 0
-        end
         @score
     end
 end

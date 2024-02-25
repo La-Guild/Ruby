@@ -51,4 +51,11 @@ describe 'Bowling' do
         sut.roll(4)
         expect(sut.score).to be(5 + 3 + 4 + 4)
     end
+
+    context 'Frame' do
+        it 'adsfafs' do
+            sut = Frame.new
+            expect(sut.is_finished?).to be(false)
+        end
+    end
 end

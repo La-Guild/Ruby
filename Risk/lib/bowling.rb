@@ -20,7 +20,7 @@ class Frame
     end
 
     def is_finished?
-
+        false
     end
 
     def score

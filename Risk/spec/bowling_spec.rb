@@ -18,4 +18,20 @@ require_relative '../lib/risk'
 
 describe 'Bowling' do
 
+    it 'score are first knocked down bowls' do
+        sut = Bowling.new
+        sut.roll(5)
+        expect(sut.score).to be(5)
+    end
+
 end 
+
+class Bowling
+    def roll(pins)
+        @score = pins
+    end
+
+    def score
+        @score
+    end
+end

@@ -8,6 +8,11 @@ describe 'Manhattan distance' do
   it '(1,1) to (1,2) == 1' do
     expect(Asdfasfd.manhattan_distance(Point.new(1, 1), Point.new(1, 2))).to be(1)
   end
+
+  it 'is commutative' do
+    expect(Asdfasfd.manhattan_distance(Point.new(1, 1), Point.new(1, 2))).to be(1)
+    expect(Asdfasfd.manhattan_distance(Point.new(1, 2), Point.new(1, 1))).to be(1)
+  end
 end
 
 class Asdfasfd

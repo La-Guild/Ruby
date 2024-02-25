@@ -13,6 +13,12 @@ describe 'Manhattan distance' do
     expect(Asdfasfd.manhattan_distance(Point.new(1, 1), Point.new(1, 2))).to be(1)
     expect(Asdfasfd.manhattan_distance(Point.new(1, 2), Point.new(1, 1))).to be(1)
   end
+
+  it 'acceptance tests' do
+    expect(Asdfasfd.manhattan_distance(Point.new(1, 1), Point.new(1, 1))).to be(0)
+    expect(Asdfasfd.manhattan_distance(Point.new(5, 4), Point.new(3, 2))).to be(4)
+    expect(Asdfasfd.manhattan_distance(Point.new(1, 1), Point.new(0, 3))).to be(3)
+  end
 end
 
 class Asdfasfd
@@ -30,6 +36,6 @@ class Point
   end
 
   def distance_to(another)
-    (@x.abs - another.x.abs + @y.abs - another.y.abs).abs
+    (@x - another.x).abs + (@y - another.y).abs
   end
 end

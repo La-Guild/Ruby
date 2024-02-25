@@ -1,0 +1,8 @@
+<p> Empezadoo </p>
+
+<p>Player 1 communities: <%= @risk.players[0].owned_communities %></p>
+<p>Player 1 units: <%= @risk.players[0].recruited_units %></p>
+
+<% @risk.players[0].owned_communities.each do |community| %>
+  <%= button_to community.name %>
+<% end %>

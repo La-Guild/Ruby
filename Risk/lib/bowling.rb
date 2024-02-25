@@ -1,14 +1,27 @@
 class Bowling
     def initialize
-        @score = 0
+        @frames = []
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
+        @frames.push(Frame.new)
     end
 
     def roll(pins)
-        @score += pins
+        @frames[0].roll(pins)
     end
 
     def score
-        @score
+        result = 0
+        @frames.each { |f| result += f.score }
+
+        result
     end
 end
 

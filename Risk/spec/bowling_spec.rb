@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../lib/player'
-require_relative '../lib/risk'
 
 # Un juego tiene 10 frames
 # Cada frame tiene 2 tiradas
@@ -18,13 +16,17 @@ require_relative '../lib/risk'
 
 describe 'Bowling' do
 
+    it 'score is 0 by default' do
+        sut = Bowling.new
+        expect(sut.score).to be(0)
+    end
+
     it 'score are first knocked down bowls' do
         sut = Bowling.new
         sut.roll(5)
         expect(sut.score).to be(5)
     end
-
-end 
+end
 
 class Bowling
     def roll(pins)
@@ -32,6 +34,9 @@ class Bowling
     end
 
     def score
+        if @score == nil
+            return 0
+        end
         @score
     end
 end

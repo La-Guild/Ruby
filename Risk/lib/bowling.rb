@@ -48,4 +48,8 @@ class Frame
     def score
         @score
     end
+
+    def strike?
+        @score >= 10 and @rolls == 1
+    end
 end

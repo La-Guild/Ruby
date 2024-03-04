@@ -78,6 +78,22 @@ describe 'Bowling' do
             expect(sut.score).to be(4 + 3)
         end
 
+        it 'is a strike?' do
+            sut = Frame.new
+            sut.roll(4)
+            sut.roll(3)
+            expect(sut.strike?).to be(false)
+
+            sut = Frame.new
+            sut.roll(10)
+            expect(sut.strike?).to be(true)
+
+            sut = Frame.new
+            sut.roll(5)
+            sut.roll(5)
+            expect(sut.strike?).to be(false)
+        end
+
         # Saber si es un pleno -> Esto requiere saber del anterior
         # Saber si es un semi.pleno -> Esto requiere saber del anterior
         # Si es el "ultimo" frame????? O le damos esta responsablidad al Bowling

@@ -23,9 +23,22 @@ class Bowling
 
     def score
         result = 0
-        @frames.each { |f| result += f.score }
+
+        counter = 0
+        while counter < @frames.length
+            result += asdfjasdflk(counter)
+            counter += 1
+        end
 
         result
+    end
+
+    def asdfjasdflk(index)
+        if @frames[index].strike?
+            return @frames[index].score + @frames[index+1].score
+        end
+
+        @frames[index].score
     end
 end
 
@@ -42,7 +55,7 @@ class Frame
     end
 
     def is_finished?
-        @rolls == 2
+        @rolls == 2 or strike?
     end
 
     def score

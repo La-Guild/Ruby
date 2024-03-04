@@ -85,6 +85,19 @@ describe 'Bowling' do
         expect(sut.score).to be(10 + (8 + 8) + 10)
     end
 
+    it 'last strike only adds the next frame score' do
+        sut = Bowling.new
+
+        for i in 0..8
+            sut.roll(0)
+            sut.roll(0)
+        end
+        expect(sut.score).to be(0)
+
+        sut.roll(10)
+        expect(sut.score).to be(10)
+    end
+
     context 'Frame' do
         it 'is not finished by default' do
             sut = Frame.new

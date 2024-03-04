@@ -35,7 +35,9 @@ class Bowling
 
     def asdfjasdflk(index)
         if @frames[index].strike?
-            return @frames[index].score + @frames[index+1].score
+            return @frames[index].score +
+                @frames[index+1].score +
+                @frames[index+2].score
         end
 
         @frames[index].score

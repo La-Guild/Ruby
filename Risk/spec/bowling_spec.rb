@@ -52,14 +52,20 @@ describe 'Bowling' do
         expect(sut.score).to be(5 + 3 + 4 + 4)
     end
 
-    it 'strike score is added to next frame' do
+    it 'strike score is added to two next frames' do
         sut = Bowling.new
 
         sut.roll(10)
+        expect(sut.score).to be(10)
 
         sut.roll(4)
         sut.roll(4)
         expect(sut.score).to be(10 + 8 + 8)
+
+        sut.roll(2)
+        sut.roll(8)
+
+        expect(sut.score).to be(10 + (8 + 8) + (10 + 10))
     end
 
     context 'Frame' do

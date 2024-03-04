@@ -40,6 +40,11 @@ class Bowling
                 @frames[index+2].score
         end
 
+        if @frames[index].spare?
+            return @frames[index].score +
+                @frames[index+1].score
+        end
+
         @frames[index].score
     end
 end
@@ -66,5 +71,9 @@ class Frame
 
     def strike?
         @score >= 10 and @rolls == 1
+    end
+
+    def spare?
+        @score == 10 and @rolls == 2
     end
 end

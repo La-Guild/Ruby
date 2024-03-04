@@ -68,6 +68,23 @@ describe 'Bowling' do
         expect(sut.score).to be(10 + (8 + 8) + (10 + 10))
     end
 
+    it 'spare score is added only to next frame' do
+        sut = Bowling.new
+
+        sut.roll(5)
+        sut.roll(5)
+        expect(sut.score).to be(10)
+
+        sut.roll(4)
+        sut.roll(4)
+        expect(sut.score).to be(10 + 8 + 8)
+
+        sut.roll(2)
+        sut.roll(8)
+
+        expect(sut.score).to be(10 + (8 + 8) + 10)
+    end
+
     context 'Frame' do
         it 'is not finished by default' do
             sut = Frame.new
@@ -109,6 +126,22 @@ describe 'Bowling' do
             sut.roll(5)
             sut.roll(5)
             expect(sut.strike?).to be(false)
+        end
+
+        it 'is a spare?' do
+            sut = Frame.new
+            sut.roll(4)
+            sut.roll(3)
+            expect(sut.spare?).to be(false)
+
+            sut = Frame.new
+            sut.roll(10)
+            expect(sut.spare?).to be(false)
+
+            sut = Frame.new
+            sut.roll(5)
+            sut.roll(5)
+            expect(sut.spare?).to be(true)
         end
 
         # Saber si es un pleno -> Esto requiere saber del anterior

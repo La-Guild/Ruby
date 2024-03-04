@@ -70,5 +70,16 @@ describe 'Bowling' do
             sut.roll(3)
             expect(sut.is_finished?).to be(true)
         end
+
+        it 'can sum its rolls' do
+            sut = Frame.new
+            sut.roll(4)
+            sut.roll(3)
+            expect(sut.score).to be(4 + 3)
+        end
+
+        # Saber si es un pleno -> Esto requiere saber del anterior
+        # Saber si es un semi.pleno -> Esto requiere saber del anterior
+        # Si es el "ultimo" frame????? O le damos esta responsablidad al Bowling
     end
 end
